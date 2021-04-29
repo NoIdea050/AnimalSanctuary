@@ -21,6 +21,8 @@ class CreateAnimalRequestsTable extends Migration
             $table->string('animal_name');
             $table->enum('status',['approved', 'pending', 'denied'])->default('pending');
             $table->timestamps();
+            $table->foreign('userid')->references('id')->on('users');
+            $table->foreign('animalid')->references('id')->on('animals');
         });
     }
 

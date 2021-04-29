@@ -51,7 +51,6 @@
 
 
                                         @if (Gate::denies('displayall') == false)
-
                                             <td>
                                                 <form
                                                     action="{{ action([App\Http\Controllers\AnimalController::class, 'destroy'], ['animal' => $animal['id']]) }}"
@@ -62,7 +61,6 @@
                                                     <button class="btn btn-danger" type="submit">Delete</button>
                                                 </form>
                                             </td>
-
                                         @elseif(Gate::denies('displayall') == true)
                                             <td>
                                                 @if (\App\Models\AnimalRequest::where('animalid', $animal['id'])->exists() == false)

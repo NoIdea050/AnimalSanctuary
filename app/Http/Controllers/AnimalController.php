@@ -57,7 +57,7 @@ class AnimalController extends Controller
             'date_of_birth' => 'required',
             'description' => 'required',
             'available' => 'required',
-            'image1' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:500',
+            'image1' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:1000',
             'image2' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:500',
             'image3' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:500',
         ]);
@@ -183,9 +183,9 @@ class AnimalController extends Controller
         $this->validate(request(), [
             'name' => 'required',
             'date_of_birth' => 'required',
-            'image1' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:500',
-            'image2' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:500',
-            'image3' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:500',
+            'image1' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:1000',
+            'image2' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:1000',
+            'image3' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:1000',
         ]);
         $animal->name = $request->input('name');
         $animal->date_of_birth = $request->input('date_of_birth');
